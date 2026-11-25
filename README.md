@@ -1,7 +1,7 @@
 # Galeria con Filtros de Imagen
 
-> **Alumno:** cambia este título por el nombre de tu producto y esta línea por una frase que lo explique.
-> Proyecto n.º __ del catálogo · Sitio de referencia: __ · [PRD](docs/PRD.md) · URL publicada: __
+> **Galeria con Filtros de Imagen:** Aplicación web interactiva para explorar fotografías, aplicar filtros visuales en tiempo real y organizar colecciones por categorías.
+> Proyecto n.º _26_ del catálogo · Sitio de referencia: \__ · [PRD](docs/PRD.md) · URL publicada: \_https://github.com/Yapper8/galeria-filtros.git_
 
 Plantilla del proyecto de **Lenguaje de Programación · 2026**.
 La guía completa de la actividad está en el repositorio del curso:
@@ -22,7 +22,7 @@ Si te falta alguno, sigue el tutorial `tutoriales/01-instalacion-entorno.md` del
    gh repo clone TU_USUARIO/bodega-pos
    cd bodega-pos
    ```
-3. **Ponle el nombre de tu producto** en dos lugares (así tus contenedores no se mezclan con los
+3. **Galeria de Filtros de Imagen** en dos lugares (así tus contenedores no se mezclan con los
    de un compañero): la línea `name: mi-producto` de `docker-compose.yml` y el campo `"name"` de
    `package.json`. Usa minúsculas y guiones, por ejemplo `bodega-pos`.
 4. **Instala las dependencias:**
@@ -55,10 +55,12 @@ Si te falta alguno, sigue el tutorial `tutoriales/01-instalacion-entorno.md` del
    npm run test:integration
    ```
 10. **Carga tu backlog en GitHub** (crea los 45 Issues, los sprints y tu GitHub Project):
-   ```bash
-   gh auth refresh -s project
-   npm run backlog
-   ```
+
+```bash
+gh auth refresh -s project
+npm run backlog
+```
+
 11. **Protege tu rama `main`** e invita al profesor y a tu compañero revisor
     (tutorial `tutoriales/02-git-y-github.md`, sección 9).
 
@@ -68,21 +70,21 @@ Si algo falla, revisa la sección [Problemas frecuentes](#problemas-frecuentes).
 
 ## Comandos
 
-| Comando | Qué hace | Cuándo |
-| --- | --- | --- |
-| `npm run dev` | API (puerto 3000) y frontend (puerto 5173) con recarga automática | Mientras programas |
-| `npm run check` | Lint + revisión de tipos + pruebas unitarias | **Antes de cada commit** |
-| `npm test` | Solo pruebas unitarias | Mientras escribes estructuras y algoritmos |
-| `npm run test:watch` | Pruebas unitarias que se repiten al guardar | Mientras escribes estructuras y algoritmos |
-| `npm run test:integration` | Pruebas de la API contra PostgreSQL (base `app_test`) | Al tocar la API o el SQL |
-| `npm run test:e2e` | Pruebas en navegador real con Playwright | Antes de cerrar un sprint |
-| `npm run migrate` | Aplica las migraciones pendientes | Después de crear una migración o de hacer `git pull` |
-| `npm run db:reset` | **Borra** la base y aplica todas las migraciones | Cuando tu base local quedó desordenada |
-| `npm run seed` | Carga 10.000 registros de prueba | Después de `db:reset` |
-| `npm run bench` | Benchmark de ordenamiento (H4.3) | Sprint 4 |
-| `npm run build` | Construye el frontend para producción en `dist/` | Lo hace la CI y el despliegue |
-| `npm start` | Arranca en modo producción | Para probar el build |
-| `npm run backlog` | Carga el backlog en Issues y GitHub Project | Una vez, en el Sprint 0 |
+| Comando                    | Qué hace                                                          | Cuándo                                               |
+| -------------------------- | ----------------------------------------------------------------- | ---------------------------------------------------- |
+| `npm run dev`              | API (puerto 3000) y frontend (puerto 5173) con recarga automática | Mientras programas                                   |
+| `npm run check`            | Lint + revisión de tipos + pruebas unitarias                      | **Antes de cada commit**                             |
+| `npm test`                 | Solo pruebas unitarias                                            | Mientras escribes estructuras y algoritmos           |
+| `npm run test:watch`       | Pruebas unitarias que se repiten al guardar                       | Mientras escribes estructuras y algoritmos           |
+| `npm run test:integration` | Pruebas de la API contra PostgreSQL (base `app_test`)             | Al tocar la API o el SQL                             |
+| `npm run test:e2e`         | Pruebas en navegador real con Playwright                          | Antes de cerrar un sprint                            |
+| `npm run migrate`          | Aplica las migraciones pendientes                                 | Después de crear una migración o de hacer `git pull` |
+| `npm run db:reset`         | **Borra** la base y aplica todas las migraciones                  | Cuando tu base local quedó desordenada               |
+| `npm run seed`             | Carga 10.000 registros de prueba                                  | Después de `db:reset`                                |
+| `npm run bench`            | Benchmark de ordenamiento (H4.3)                                  | Sprint 4                                             |
+| `npm run build`            | Construye el frontend para producción en `dist/`                  | Lo hace la CI y el despliegue                        |
+| `npm start`                | Arranca en modo producción                                        | Para probar el build                                 |
+| `npm run backlog`          | Carga el backlog en Issues y GitHub Project                       | Una vez, en el Sprint 0                              |
 
 La primera vez que corras `npm run test:e2e` instala el navegador: `npx playwright install chromium`.
 
@@ -128,13 +130,13 @@ las comprueba en cada `npm test` y en la CI.
 
 ### Lo que ya funciona y lo que te toca
 
-| Ya viene hecho (es el ejemplo) | Te toca a ti |
-| --- | --- |
+| Ya viene hecho (es el ejemplo)                                      | Te toca a ti                                                                        |
+| ------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
 | Funcionalidad de ejemplo `src/tasks` con CRUD, validación y pruebas | Crear las carpetas de las funcionalidades de tu producto (H2.1, H10.1, H10.2, H5.1) |
-| Pila (`Stack`) y burbuja (`bubbleSort`) resueltos | Lista enlazada, cola, tabla hash, mergesort, quicksort, búsqueda binaria (E3, E4) |
-| Cierre ordenado con SIGINT y SIGTERM | Guardar lo pendiente y cerrar tu log antes de salir (H6.1) |
-| Esqueleto del log de operaciones | Implementarlo con descriptores de archivo (H5.2) |
-| Migraciones, semillas, Docker, CI | Tus migraciones, tus semillas, mantener la CI en verde |
+| Pila (`Stack`) y burbuja (`bubbleSort`) resueltos                   | Lista enlazada, cola, tabla hash, mergesort, quicksort, búsqueda binaria (E3, E4)   |
+| Cierre ordenado con SIGINT y SIGTERM                                | Guardar lo pendiente y cerrar tu log antes de salir (H6.1)                          |
+| Esqueleto del log de operaciones                                    | Implementarlo con descriptores de archivo (H5.2)                                    |
+| Migraciones, semillas, Docker, CI                                   | Tus migraciones, tus semillas, mantener la CI en verde                              |
 
 Las funciones pendientes lanzan el error `Pendiente: H?.?` y sus pruebas están marcadas con `it.todo`.
 Al implementarlas, cambia `it.todo` por pruebas reales.
@@ -157,13 +159,13 @@ El paso a paso detallado está en `tutoriales/05-flujo-de-trabajo-diario.md` del
 
 ## Problemas frecuentes
 
-| Síntoma | Causa probable | Solución |
-| --- | --- | --- |
-| `Falta la variable de entorno DATABASE_URL` | No existe `.env` | `cp .env.example .env` |
-| `ECONNREFUSED 127.0.0.1:5433` | PostgreSQL no está corriendo o todavía arranca | Abre Docker Desktop y ejecuta `docker compose up -d --wait` |
-| `Cannot connect to the Docker daemon` | Docker Desktop está cerrado | Ábrelo y espera a que diga *Engine running* |
-| `port is already allocated` | Otro programa usa el puerto 5433 | Cambia `5433` por `5434` en `docker-compose.yml` y en `.env` |
-| `database "app_test" does not exist` | El volumen se creó antes de existir `db/init` | `docker compose down -v` y luego `docker compose up -d` (borra los datos locales) |
-| `node: bad option: --env-file-if-exists` o errores con `.ts` | Node.js viejo | Instala Node 24: `node --version` debe decir v24 o superior |
-| `Executable doesn't exist` en Playwright | Falta el navegador | `npx playwright install chromium` |
-| La CI falla pero en tu máquina pasa | No corriste `npm run check` o falta un archivo en el commit | Lee el log en la pestaña **Actions** del repositorio |
+| Síntoma                                                      | Causa probable                                              | Solución                                                                          |
+| ------------------------------------------------------------ | ----------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `Falta la variable de entorno DATABASE_URL`                  | No existe `.env`                                            | `cp .env.example .env`                                                            |
+| `ECONNREFUSED 127.0.0.1:5433`                                | PostgreSQL no está corriendo o todavía arranca              | Abre Docker Desktop y ejecuta `docker compose up -d --wait`                       |
+| `Cannot connect to the Docker daemon`                        | Docker Desktop está cerrado                                 | Ábrelo y espera a que diga _Engine running_                                       |
+| `port is already allocated`                                  | Otro programa usa el puerto 5433                            | Cambia `5433` por `5434` en `docker-compose.yml` y en `.env`                      |
+| `database "app_test" does not exist`                         | El volumen se creó antes de existir `db/init`               | `docker compose down -v` y luego `docker compose up -d` (borra los datos locales) |
+| `node: bad option: --env-file-if-exists` o errores con `.ts` | Node.js viejo                                               | Instala Node 24: `node --version` debe decir v24 o superior                       |
+| `Executable doesn't exist` en Playwright                     | Falta el navegador                                          | `npx playwright install chromium`                                                 |
+| La CI falla pero en tu máquina pasa                          | No corriste `npm run check` o falta un archivo en el commit | Lee el log en la pestaña **Actions** del repositorio                              |
